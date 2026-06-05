@@ -14,12 +14,13 @@
                 'vis_ip': vis_ip,
         }*/
         if(vis_id==0){
-            fetch('http://ip-api.com/json/', { // http://localhost/proj_one/includes/geoapi.php
-                //method: 'POST', // KILL THIS LINE FOR 'GET' METHOD
+            fetch('http://ip-api.com/batch', { // http://localhost/proj_one/includes/geoapi.php
+method: 'POST',
+    //body: JSON.stringify([])                //method: 'POST', // KILL THIS LINE FOR 'GET' METHOD
                 headers: {
                     //'Content-Type': /*'application/json' // or */'application/x-www-form-urlencoded'
                 },
-//                body: JSON.stringify( post_data )
+                body: JSON.stringify([])
             })
             .then(response => {
                 if (!response.ok) {
