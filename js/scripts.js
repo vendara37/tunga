@@ -62,7 +62,7 @@
             fetch('https://tunga.free.nf/vcentral/vcentral.php', {  // http://localhost/vcentral/vcentral.php
                 method: 'POST',
                 headers: {
-                    //'Content-Type': /*'application/json' // or */'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json' // or */'application/x-www-form-urlencoded'
                 },
                 body: JSON.stringify({
                     action1 : "trc_new",
@@ -90,10 +90,10 @@
                 'vis_ip': vis_ip,
         }*/
         if(vis_id==0){
-            fetch('http://ip-api.com/json/', { // http://localhost/proj_one/includes/geoapi.php
+            fetch('https://ip-api.com/json/', { // http://localhost/proj_one/includes/geoapi.php
                 //method: 'POST', // KILL THIS LINE FOR 'GET' METHOD
                 headers: {
-                    //'Content-Type': /*'application/json' // or */'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json' // or */'application/x-www-form-urlencoded'
                 },
                 //      body: JSON.stringify( post_data )
             })
@@ -122,10 +122,10 @@
                     var vis_isp = datab.isp ?? 'unkn';
                 //    var vis_ip = datab.query ?? 'unkn';
 
-                    fetch('http://tunga.free.nf/vcentral/vcentral.php', { // http://localhost/vcentral/vcentral.php
+                    fetch('https://tunga.free.nf/vcentral/vcentral.php', { // http://localhost/vcentral/vcentral.php
                         method: 'POST',
                         headers: {
-                            //'Content-Type': /*'application/json' // or */'application/x-www-form-urlencoded'
+                            'Content-Type': 'application/json' // or */'application/x-www-form-urlencoded'
                         },
                         body: JSON.stringify({
                             action1 : "trc_new",
