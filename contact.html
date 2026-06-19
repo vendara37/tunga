@@ -119,13 +119,14 @@ $(document).ready(function() {
                 'vis_msg': vis_msg,
                 'msg_src': msg_src
         }
-        $.post({
+        $.ajax({
             type: 'POST',
-            url: 'http://tunga.free.nf/vcentral/vcentral.php',
+            url: 'https://tunga.free.nf/vcentral/vcentral.php',
 			//url: 'http://localhost/vcentral/vcentral.php',
 			//url: 'http://localhost/tunga/includes/postmsg1.php',
+			contentType: 'application/json',
 			dataType: 'json',
-            data: post_data,
+            data: JSON.stringify (post_data),
 			success: function(response) {
 				var resp = response;
                 if(resp.success=='true'){
@@ -154,7 +155,7 @@ $(document).ready(function() {
 	}); 
 });
 
-trcpost('tunga_gh', 'ct');
+//trcpost('tunga_gh', 'ct');
 //=================================TRACEUR================================================
 
         </script>
